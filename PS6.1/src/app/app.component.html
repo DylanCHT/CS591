@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <img width="300" alt="MLB Logo" src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiG0KbalOfiAhWEtlkKHSi1DioQjRx6BAgBEAU&url=https%3A%2F%2Fwww.logodesignlove.com%2Fmajor-league-baseball-logos-evolution&psig=AOvVaw3tGo2UsBUOZ1L2Pfwyng4-&ust=1560539410362416">
+</div>
+<h2>Here is your team of baseball players. Type in the name of the player, and their tame name to add them to the roster: </h2>
+<div>
+
+
+  <ul>
+    <li *ngFor="let player of players">
+      <label (click)="showPlayerStats(player)">{{player.name}} ({{player.team}})</label>
+    </li>
+  </ul>
+
+</div>
+
+<app-playerStats [selectedPlayer]="selectedPlayer"></app-playerStats>
+<app-addPlayer>Click here to add a player to your dream team</app-addPlayer>
